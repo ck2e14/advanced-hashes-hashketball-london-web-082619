@@ -216,11 +216,12 @@ end
 
 
 def big_shoe_rebounds
+  new_array = []
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
       if attributes == :players 
-        attributes[:shoe.max]
-        return :rebounds
+        
+        new_array << 
       end
     end
   end
