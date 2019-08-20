@@ -235,7 +235,7 @@ end
 
 def most_points_scored
   starting_points = 0 
-  top_scorer = []
+  top_scorer = ""
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
       if attributes == :players
@@ -248,7 +248,7 @@ def most_points_scored
       end
     end
   end
-  return top_scorer.to_s
+  return top_scorer
 end
 
 
