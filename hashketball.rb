@@ -217,7 +217,7 @@ end
 
 def big_shoe_rebounds
   biggest_shoe = 0
-  num_rebounds = 0
+  number_of_rebounds = 0
 
   game_hash.each do |home_or_away, team_data|
     team_data[:players].each do |player|
@@ -227,9 +227,12 @@ def big_shoe_rebounds
       end
     end
   end
-
-  num_rebounds
+  number_of_rebounds
 end
+
+
+
+
 
 
 def good_practices
