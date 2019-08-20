@@ -232,6 +232,20 @@ def big_shoe_rebounds
 end
 
 
+
+def most_points_scored
+  game_hash.each do |home_or_away, team_data|
+    team_data.each do |attributes, attribute_data|
+      if attribute_data == :points 
+        return :points.max
+      end
+    end
+  end
+end
+
+
+
+
 def good_practices
   game_hash.each do |home_or_away, team_data|
     #are you ABSOLUTELY SURE what 'home_or_away and team_data' are? use binding.pry to find out!
