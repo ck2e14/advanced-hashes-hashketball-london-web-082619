@@ -239,9 +239,8 @@ def most_points_scored
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
       if attributes == :players
-        attribute_data.each do |individual_player_hash|
-          if individual_player_hash[:points] > starting_points
-            starting_points = starting_points += individual_player_hash[:points]
+        attribute_data.each do |individual_player|
+          if individual_player[:points] > starting_points
             top_scorer << individual_player_hash[:player_name]
           end
         end
