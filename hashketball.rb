@@ -236,7 +236,8 @@ end
 def most_points_scored
   starting_points = 0 
   game_hash.each do |home_or_away, team_data|
-    team_data.each do |attributes, player_attributes|
+    team_data.each do |attributes, attribute_data|
+      
 
 
 def good_practices
