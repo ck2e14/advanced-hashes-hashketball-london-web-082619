@@ -242,7 +242,7 @@ def most_points_scored
         attribute_data.each do |individual_player|
           if individual_player[:points] > starting_points
             starting_points = individual_player[:points]
-            top_scorer.push individual_player[:player_name]
+            top_scorer = individual_player[:player_name]
           end
         end
       end
