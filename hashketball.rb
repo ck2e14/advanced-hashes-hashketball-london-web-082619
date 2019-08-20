@@ -235,6 +235,7 @@ end
 
 def most_points_scored
   starting_points = 0 
+  top scorer = 
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
       if attributes == :players
