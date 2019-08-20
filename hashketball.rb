@@ -235,14 +235,14 @@ end
 
 def most_points_scored
   starting_points = 0 
-  top_scorer = ""
+  top_scorer = []
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
       if attributes == :players
         attribute_data.each do |individual_player|
           if individual_player[:points] > starting_points
             starting_points = individual_player[:points]
-            top_scorer << individual_player[:player_name]
+            top_scorer.push individual_player[:player_name]
           end
         end
       end
