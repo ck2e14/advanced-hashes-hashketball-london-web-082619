@@ -216,15 +216,19 @@ end
 
 
 def big_shoe_rebounds
-  new_array = []
-  game_hash.each do |home_or_away, team_data|
-    team_data.each do |attributes, attribute_data|
-      if attributes == :players 
-        
-        new_array << 
+  biggest_shoe = 0
+  number_of_rebounds = 0
+
+  game_hash.each do |_team, game_data|
+    game_data[:players].each do |player|
+      if player[:shoe] > biggest_shoe
+        biggest_shoe = player[:shoe]
+        num_rebounds = player[:rebounds]
       end
     end
   end
+
+  number_of_rebounds
 end
 
 
