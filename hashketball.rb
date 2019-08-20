@@ -235,21 +235,8 @@ end
 
 def most_points_scored
   starting_points = 0 
-  max_point_scorer = %w[]
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, player_attributes|
-      if player_attributes == :points
-       if player_attributes > starting_points
-         max_point_scorer << :player_name
-       end
-      end
-    end
-  end
-  max_point_scorer
-end
-     
-
-
 
 
 def good_practices
