@@ -237,7 +237,17 @@ def most_points_scored
   starting_points = 0 
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
-      
+      if attributes == :players
+        attribute_data.each do |individual_player_hash|
+          if individual_player_hash[:points] > starting_points
+            top_scorer = individual_player_hash[:player_name]
+          end
+        end
+      end
+    end
+  end
+  top_scorer
+end
 
 
 def good_practices
