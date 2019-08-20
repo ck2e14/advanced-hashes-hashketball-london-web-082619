@@ -234,10 +234,13 @@ end
 
 
 def most_points_scored
+  stapoints = 0 
+  max_point_scorer = %w[]
   game_hash.each do |home_or_away, team_data|
-    team_data.each do |attributes, attribute_data|
-      if attribute_data == :points 
-        return :points.max
+    team_data.each do |attributes, player_attributes|
+      if player_attributes == :points
+        player_attributes > points
+      
       end
     end
   end
