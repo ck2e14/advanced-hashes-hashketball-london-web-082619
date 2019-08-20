@@ -219,8 +219,8 @@ def big_shoe_rebounds
   game_hash.each do |home_or_away, team_data|
     team_data.each do |attributes, attribute_data|
       if attributes == :players 
-        attributes[:shoe].max
-        return :rebounds.to_i
+        attributes[:shoe.max]
+        return :rebounds
       end
     end
   end
